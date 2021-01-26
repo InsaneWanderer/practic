@@ -1,0 +1,13 @@
+C:\Users\Artyom\Desktop\HousingFund\bin\Debug\HousingFund.exe.config
+C:\Users\Artyom\Desktop\HousingFund\bin\Debug\HousingFund.exe
+C:\Users\Artyom\Desktop\HousingFund\bin\Debug\HousingFund.pdb
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.csprojAssemblyReference.cache
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.Admin.resources
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.Authorization.resources
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.Employees.resources
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.Properties.Resources.resources
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.csproj.GenerateResource.cache
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.exe
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.pdb
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.EmployeeForm.resources
+C:\Users\Artyom\Desktop\HousingFund\obj\Debug\HousingFund.UpdateEmployee.resources
