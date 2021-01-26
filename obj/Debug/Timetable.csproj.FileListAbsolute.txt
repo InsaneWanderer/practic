@@ -1,0 +1,12 @@
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.csprojAssemblyReference.cache
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.Authentication.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.Properties.Resources.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.csproj.GenerateResource.cache
+C:\Users\Artyom\Desktop\practic\Timetable\bin\Debug\Timetable.exe.config
+C:\Users\Artyom\Desktop\practic\Timetable\bin\Debug\Timetable.exe
+C:\Users\Artyom\Desktop\practic\Timetable\bin\Debug\Timetable.pdb
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.exe
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.pdb
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AdminPanel.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AllUsers.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.UserForm.resources
