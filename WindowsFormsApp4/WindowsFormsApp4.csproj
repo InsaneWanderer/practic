@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2313692B-5E8C-4370-851D-CD30A9E21E65}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp4</RootNamespace>
+    <AssemblyName>WindowsFormsApp4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vlc.DotNet.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.3.1.0\lib\net45\Vlc.DotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Core.Interops, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Core.Interops.3.1.0\lib\net45\Vlc.DotNet.Core.Interops.dll</HintPath>
+    </Reference>
+    <Reference Include="Vlc.DotNet.Forms, Version=3.1.0.0, Culture=neutral, PublicKeyToken=84529da31f4eb963, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vlc.DotNet.Forms.3.1.0\lib\net45\Vlc.DotNet.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions.cs" />
+    <Compile Include="CinemaOnlineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaOnlineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollectionContent.Designer.cs">
+      <DependentUpon>CollectionContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionData.cs" />
+    <Compile Include="DBSQLServerUtils.cs" />
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="Authentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication.Designer.cs">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContent.Designer.cs">
+      <DependentUpon>AddContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Film.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Film.Designer.cs">
+      <DependentUpon>Film.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmData.cs" />
+    <Compile Include="GenreContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenreContent.Designer.cs">
+      <DependentUpon>GenreContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenreData.cs" />
+    <Compile Include="Genres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genres.Designer.cs">
+      <DependentUpon>Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGenre.Designer.cs">
+      <DependentUpon>AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Collections.Designer.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCollection.Designer.cs">
+      <DependentUpon>AddCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllContent.Designer.cs">
+      <DependentUpon>AllContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeaderImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Header.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CollectionsForm.Designer.cs">
+      <DependentUpon>CollectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscriptions.Designer.cs">
+      <DependentUpon>Subscriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserData.cs" />
+    <Compile Include="Video.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Video.Designer.cs">
+      <DependentUpon>Video.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Authentication.resx">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddContent.resx">
+      <DependentUpon>AddContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollectionContent.resx">
+      <DependentUpon>CollectionContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Film.resx">
+      <DependentUpon>Film.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenreContent.resx">
+      <DependentUpon>GenreContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genres.resx">
+      <DependentUpon>Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGenre.resx">
+      <DependentUpon>AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Collections.resx">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCollection.resx">
+      <DependentUpon>AddCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllContent.resx">
+      <DependentUpon>AllContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HeaderImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CollectionsForm.resx">
+      <DependentUpon>CollectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscriptions.resx">
+      <DependentUpon>Subscriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Video.resx">
+      <DependentUpon>Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CinemaOnlineDataSet.xsc">
+      <DependentUpon>CinemaOnlineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaOnlineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaOnlineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaOnlineDataSet.xss">
+      <DependentUpon>CinemaOnlineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\img.png" />
+    <None Include="Resources\new-dante.png" />
+    <None Include="Resources\PosterPic.bmp" />
+    <None Include="Resources\meme.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
