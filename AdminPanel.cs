@@ -19,9 +19,22 @@ namespace Timetable
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            AllUsers allUsers = new AllUsers();
-            allUsers.Show();
-            Hide();
+            FormActions.GoTo(new AllUsers());
+        }
+
+        private void btnToTeachers_Click(object sender, EventArgs e)
+        {
+            FormActions.GoTo(new AllTeachers());
+        }
+
+        private void btnToStudents_Click(object sender, EventArgs e)
+        {
+            FormActions.GoTo(new AllStudents());
+        }
+
+        private void btnToSubjects_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

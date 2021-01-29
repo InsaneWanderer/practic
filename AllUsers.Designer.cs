@@ -32,9 +32,7 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnToTeachers = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,16 +79,6 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // btnToTeachers
-            // 
-            this.btnToTeachers.Location = new System.Drawing.Point(364, 330);
-            this.btnToTeachers.Name = "btnToTeachers";
-            this.btnToTeachers.Size = new System.Drawing.Size(92, 50);
-            this.btnToTeachers.TabIndex = 1;
-            this.btnToTeachers.Text = "Перейти к таблице учителей";
-            this.btnToTeachers.UseVisualStyleBackColor = true;
-            this.btnToTeachers.Click += new System.EventHandler(this.btnToTeachers_Click);
-            // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(70, 388);
@@ -99,16 +87,7 @@
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Назад";
             this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(462, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 50);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Перейти к таблице учеников";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // AllUsers
             // 
@@ -117,8 +96,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnToTeachers);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.dgvUsers);
@@ -136,8 +113,6 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnToTeachers;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button button1;
     }
 }

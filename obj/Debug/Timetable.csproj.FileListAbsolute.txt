@@ -10,3 +10,7 @@ C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.pdb
 C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AdminPanel.resources
 C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AllUsers.resources
 C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.UserForm.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AllTeachers.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.TeacherSubject.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.AllStudents.resources
+C:\Users\Artyom\Desktop\practic\Timetable\obj\Debug\Timetable.StudentGroup.resources

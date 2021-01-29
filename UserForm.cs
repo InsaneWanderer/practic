@@ -14,9 +14,17 @@ namespace Timetable
 {
     public partial class UserForm : Form
     {
+        UserData user;
+
         public UserForm()
         {
             InitializeComponent();
+        }
+
+        public UserForm(UserData user)
+        {
+            InitializeComponent();
+            this.user = user;
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
@@ -36,8 +44,8 @@ namespace Timetable
                         patronymic = patronymic == "" ? "NULL" : "'" + patronymic + "'";
                         if (Regex.IsMatch(login, @"^[A-Za-z0-9]+$"))
                         {
-                            int id = UserData.id;
-                            bool check = true; //Служит для того, что значения не повторяются
+                            string id = user.Get("id");
+                            bool check = true; //Служит для проверки того, что значения не повторяются
                             SqlConnection conn = DBUtils.GetDBConnection();
                             try
                             {
@@ -46,15 +54,15 @@ namespace Timetable
                                 //проверка на повторение ФИО
                                 cmd.CommandText = "SELECT COUNT(*) FROM Users " +
                                     "WHERE Surname = '" + surname + "' AND Name = '" + name + "' AND Patronymic = " + patronymic;
-                                if(UserData.id == 0)
+                                if (id == "0")
                                 {
-                                    if(CheckMatch(cmd))
+                                    if (CheckMatch(cmd))
                                     {
                                         check = false;
                                         MessageBox.Show("Пользователь с таким ФИО уже существует!");
                                     }
                                 }
-                                else if(surname != UserData.surname || name != UserData.name || patronymic != UserData.patronymic)
+                                else if (surname != user.Get("surname") || name != user.Get("name") || patronymic != user.Get("patronymic"))
                                 {
                                     if (CheckMatch(cmd))
                                     {
@@ -65,7 +73,7 @@ namespace Timetable
                                 //Проверка на повторение логина
                                 cmd.CommandText = "SELECT COUNT(*) FROM Users " +
                                     "WHERE Login = '" + login + "'";
-                                if (UserData.id == 0)
+                                if (id == "0")
                                 {
                                     if (CheckMatch(cmd))
                                     {
@@ -73,7 +81,7 @@ namespace Timetable
                                         MessageBox.Show("Пользователь с таким логином уже существует!");
                                     }
                                 }
-                                else if (login != UserData.login)
+                                else if (login != user.Get("login"))
                                 {
                                     if (CheckMatch(cmd))
                                     {
@@ -84,7 +92,7 @@ namespace Timetable
 
                                 if (check)
                                 {
-                                    if (id == 0)
+                                    if (id == "0")
                                     {
                                         cmd.CommandText = "INSERT INTO Users (Surname, Name, Patronymic, TypeId, Login) " +
                                             "Values ('" + surname + "','" + name + "'," + patronymic + "," + typeId + ",'" + login + "');";
@@ -130,13 +138,13 @@ namespace Timetable
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            if(UserData.id != 0)
+            if(user.Get("id") != "0")
             {
-                txtSurname.Text = UserData.surname;
-                txtName.Text = UserData.name;
-                txtPatronymic.Text = UserData.patronymic;
-                txtType.Text = UserData.type;
-                txtLogin.Text = UserData.login;
+                txtSurname.Text = user.Get("surname");
+                txtName.Text = user.Get("name");
+                txtPatronymic.Text = user.Get("patronymic");
+                txtType.Text = user.Get("type");
+                txtLogin.Text = user.Get("login");
 
                 btnEnter.Text = "Сохранить изменения";
                 btnDropPassword.Visible = true;
@@ -181,7 +189,7 @@ namespace Timetable
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Close();
+            FormActions.GoTo(new AllUsers());
         }
 
         private void btnDropPassword_Click(object sender, EventArgs e)
@@ -196,7 +204,7 @@ namespace Timetable
                     SqlCommand cmd = conn.CreateCommand();
                     cmd.CommandText = "UPDATE Users " +
                         "SET Password = 'password' " +
-                        "WHERE Id = " + UserData.id;
+                        "WHERE Id = " + user.Get("id");
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Пароль был сброшен!");
                 }

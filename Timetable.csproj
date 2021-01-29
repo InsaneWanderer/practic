@@ -52,6 +52,18 @@
     <Compile Include="AdminPanel.Designer.cs">
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllStudents.Designer.cs">
+      <DependentUpon>AllStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllTeachers.Designer.cs">
+      <DependentUpon>AllTeachers.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +78,27 @@
     <Compile Include="Authentication.Designer.cs">
       <DependentUpon>Authentication.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormActions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGroup.Designer.cs">
+      <DependentUpon>StudentGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects.Designer.cs">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSubject.Designer.cs">
+      <DependentUpon>TeacherSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserData.cs" />
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
@@ -78,6 +109,12 @@
     <Compile Include="WorkUser.cs" />
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllStudents.resx">
+      <DependentUpon>AllStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllTeachers.resx">
+      <DependentUpon>AllTeachers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllUsers.resx">
       <DependentUpon>AllUsers.cs</DependentUpon>
@@ -94,6 +131,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentGroup.resx">
+      <DependentUpon>StudentGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects.resx">
+      <DependentUpon>Subjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSubject.resx">
+      <DependentUpon>TeacherSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>

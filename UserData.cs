@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace Timetable
 {
     //Класс пользователя для передачи данных на форму
-    class UserData
+    public class UserData
     {
-        private int id = 0;
+        private string id = "0";
         private string surname;
         private string name;
         private string patronymic;
         private string type;
         private string login;
 
-        public UserData(int id, string surname, string name, string patronymic, string type, string login)
+        public UserData(string id, string surname, string name, string patronymic, string type, string login)
         {
             this.id = id;
             this.surname = surname;
@@ -26,9 +26,25 @@ namespace Timetable
             this.login = login;
         }
 
-        //public Type Get()
-        //{
-
-        //}
+        public string Get(string field)
+        {
+            switch(field)
+            {
+                case "id":
+                    return id;
+                case "surname":
+                    return surname;
+                case "name":
+                    return name;
+                case "patronymic":
+                    return patronymic;
+                case "type":
+                    return type;
+                case "login":
+                    return login;
+                default:
+                    return "0";
+            }
+        }
     }
 }

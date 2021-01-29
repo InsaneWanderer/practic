@@ -13,6 +13,8 @@ namespace Timetable
 {
     public partial class AllUsers : Form
     {
+        UserData user;
+
         public AllUsers()
         {
             InitializeComponent();
@@ -33,7 +35,7 @@ namespace Timetable
             if (dgvUsers.SelectedRows.Count == 1)
             {
                 GetData();
-                CallUserForm();
+                CallUserForm(user);
             }
             else MessageBox.Show("Выберите пользователя!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -55,7 +57,11 @@ namespace Timetable
                         {
                             conn.Open();
                             SqlCommand cmd = conn.CreateCommand();
-                            cmd.CommandText = "DELETE Users WHERE Id = " + dgvUsers.SelectedRows[0].Cells[0].Value.ToString();
+                            cmd.CommandText = "DELETE Teachers WHERE TeacherId = " + id;
+                            cmd.ExecuteNonQuery();
+                            cmd.CommandText = "DELETE Students WHERE StudentId = " + id;
+                            cmd.ExecuteNonQuery();
+                            cmd.CommandText = "DELETE Users WHERE Id = " + id;
                             cmd.ExecuteNonQuery();
                             MessageBox.Show("Удаление прошло успешно!");
                             FillUsers();
@@ -109,27 +115,26 @@ namespace Timetable
         //Сохраняет данные пользователя в классе User
         private void GetData()
         {
-           UserData user = new UserData(Convert.ToInt32(dgvUsers.SelectedRows[0].Cells[0].Value), dgvUsers.SelectedRows[0].Cells[2].Value.ToString(),
-                dgvUsers.SelectedRows[0].Cells[1].Value.ToString(), dgvUsers.SelectedRows[0].Cells[3].Value.ToString(),
-                dgvUsers.SelectedRows[0].Cells[4].Value.ToString(), dgvUsers.SelectedRows[0].Cells[5].Value.ToString());
+            user = new UserData(dgvUsers.SelectedRows[0].Cells[0].Value.ToString(), dgvUsers.SelectedRows[0].Cells[2].Value.ToString(),
+                 dgvUsers.SelectedRows[0].Cells[1].Value.ToString(), dgvUsers.SelectedRows[0].Cells[3].Value.ToString(),
+                 dgvUsers.SelectedRows[0].Cells[4].Value.ToString(), dgvUsers.SelectedRows[0].Cells[5].Value.ToString());
         }
 
         //Вызывает UserForm в виде диалогового окна
-        private void CallUserForm()
+        private void CallUserForm(UserData user = null)
         {
-            UserForm userForm = new UserForm();
-            userForm.ShowDialog();
+            UserForm userForm;
+            if (user != null)
+                userForm = new UserForm(user);
+            else
+                userForm = new UserForm();
+            FormActions.GoTo(userForm);
             FillUsers();
         }
 
-        private void btnToTeachers_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            FormActions.GoTo(new AdminPanel());
         }
     }    
 }
